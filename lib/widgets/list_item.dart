@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CardListItem extends StatelessWidget {
-  CardListItem({this.title, this.icons, this.onPress});
+  const CardListItem({super.key, this.title, this.icons, this.onPress});
 
   final String? title;
   final IconData? icons;
@@ -11,10 +10,8 @@ class CardListItem extends StatelessWidget {
   final double _textSize = 50;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.1
-      // ScreenUtil.instance.setHeight(30)
-      ,
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.1,
       child: Card(
         child: ListTile(
           onTap: onPress,

@@ -45,9 +45,7 @@ class _HttpHelloViewState extends State<HttpHelloView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child:
-            // buildContainerReq(),
-            Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FutureBuilder(
@@ -59,36 +57,18 @@ class _HttpHelloViewState extends State<HttpHelloView> {
                         as Map<String, dynamic>;
                     return Text("${decodedData["name"]}");
                   } else {
-                    return Text("You have error. Look at api");
+                    return const Text("You have error. Look at api");
                   }
                 } else if (snapshot.connectionState ==
                     ConnectionState.waiting) {
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 } else {
-                  return Text("You have error. Are You sure api ? ");
+                  return const Text("You have error. Are You sure api ? ");
                 }
               },
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Container buildContainerReq() {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          isHaveData
-              ? Text("${this.data?["name"]}")
-              : CircularProgressIndicator(),
-          ElevatedButton(
-              onPressed: () async {
-                await getApiName();
-              },
-              child: Text("Send Request")),
-        ],
       ),
     );
   }

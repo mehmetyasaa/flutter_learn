@@ -22,26 +22,26 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       backgroundColor: _isDark ? Colors.black : Colors.white,
       appBar: AppBar(
-        title: Text("Screen Until"),
+        title: const Text("Screen Until"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Visibility(
               visible: _isDark,
-              child: Text(
+              child: const Text(
                 "is dark mode open",
                 style: TextStyle(color: Colors.red),
               )),
           ElevatedButton(
-              onPressed: _backgroundChance, child: Icon(Icons.light)),
-          TextField(),
+              onPressed: _backgroundChance, child: const Icon(Icons.light)),
+          const TextField(),
           CardListItem(
-            title: 'selam' ?? "",
+            title: 'selam',
             icons: Icons.dock_sharp,
             onPress: () {},
           ),
-          CardListItem(),
+          const CardListItem(),
         ],
       ),
     );
