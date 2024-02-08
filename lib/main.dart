@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screans_until/httpHello.dart';
+import 'package:screans_until/tabbar_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HttpHelloView(),
+      home: TabbarView(),
     );
   }
 }
