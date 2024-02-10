@@ -19,7 +19,7 @@ class _TabbarViewState extends State<TabbarView> {
               FloatingActionButtonLocation.centerDocked,
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
-            child: Icon(Icons.home),
+            child: const Icon(Icons.home),
           ),
           bottomNavigationBar: const SafeArea(
               child: TabBar(
@@ -32,7 +32,7 @@ class _TabbarViewState extends State<TabbarView> {
               ),
             ],
           )),
-          body: TabBarView(children: [
+          body: const TabBarView(children: [
             HttpHelloView(),
             HomeView(),
           ]),
