@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screans_until/views/firebase_view.dart';
 import 'package:screans_until/views/form_view.dart';
 import 'package:screans_until/views/json_placeholder_view.dart';
 
@@ -14,9 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: "/firebase",
       routes: {
         "/home": (context) => JsonPlaceHolderView(),
         "/": (context) => FormView(),
+        "/firebase": (context) => FirebaseBookView(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
