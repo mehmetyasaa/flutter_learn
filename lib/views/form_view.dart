@@ -53,7 +53,7 @@ class _FormViewState extends State<FormView> {
             IconButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    print("oky");
+                    Navigator.of(context).pushNamed("/home");
                   } else {
                     ScaffoldMessenger.of(context)
                         .showSnackBar(const SnackBar(content: Text("Error")));
